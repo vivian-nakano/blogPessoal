@@ -1,3 +1,10 @@
-p{
-    font-size:500px;
+.parallax {
+    background-image: url('https://cdn.mensagenscomamor.com/content/images/m000538277.jpg?v=1&w=600&h=460');
+
+    min-height: 500px;
+
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
