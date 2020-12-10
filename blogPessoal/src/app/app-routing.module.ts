@@ -7,12 +7,12 @@ import { LoginComponent } from './login/login.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 
 const routes: Routes = [
-{ path: 'home', component: HomeComponent },
-{ path:'', redirectTo:'home', pathMatch:'full'},
-{ path: 'feed', component: FeedComponent},
-{ path: 'login', component: LoginComponent},
-{ path: 'cadastro', component: CadastroComponent},
-{ path: 'cadastro-tema', component: PostTemaComponent}
+  {path:'', redirectTo:'home', pathMatch:'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'feed', component: FeedComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'cadastro', component: CadastroComponent},
+  {path: 'cadastro-tema', component: PostTemaComponent}
 ];
 
 @NgModule({
