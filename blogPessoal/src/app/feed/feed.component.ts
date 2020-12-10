@@ -11,6 +11,9 @@ import { TemaService } from '../service/tema.service';
 })
 export class FeedComponent implements OnInit {
 
+  key = 'data'
+  reverse = true
+
   postagem:Postagem = new Postagem()
   listaPostagens: Postagem[]
 
