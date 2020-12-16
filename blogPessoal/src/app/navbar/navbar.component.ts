@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../service/auth.service';
+import { environment } from 'src/environments/environment.prod';
+import { AuthService } from './../service/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -20,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
   sair() {
     this.router.navigate(['/login'])
-    localStorage.clear()
+    environment.token = ''
   }
 
 }

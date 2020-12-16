@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Tema } from '../model/Tema';
+import { environment } from 'src/environments/environment.prod';
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,7 @@ export class TemaService {
     private http: HttpClient
   ) { }
 
-  token = { headers: new HttpHeaders().set('Authorization', localStorage.getItem('token')!) }
+  token = { headers: new HttpHeaders().set('Authorization', environment.token) }
 
  getAllTemas(): Observable<Tema[]> {
    return this.http.get<Tema[]>('http://localhost:8080/tema', this.token)
